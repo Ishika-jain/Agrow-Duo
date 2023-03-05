@@ -66,10 +66,13 @@ const Sidebar = () => {
             </li>
           </Link>
           <p className="title">USEFUL</p>
+          <Link to="/VidRec" style={{textDecoration:"none"}}>
           <li>
             <InsertChartIcon className="icon" />
             <span>News</span>
           </li>
+
+          </Link>
           <li>
             <ChatIcon className="icon" />
             <span>Chat</span>

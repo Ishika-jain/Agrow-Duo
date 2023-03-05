@@ -9,13 +9,11 @@ import "./style/dark.scss";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import { DarkModeContext } from "./context/darkModeContext";
-<<<<<<< HEAD
 import Weather from "./components/Recommendations/Weather";
-=======
-import Weather from "./components/Recommendations/WeatherDisplay";
+// import Weather from "./components/Recommendations/WeatherDisplay";
 import CropRec from "./CropRec";
 import FertRec from "./components/Recommendations/FertilizerRecommendation";
->>>>>>> bbf8493a56791422837cc517fff6b7107d195581
+import VidRec from "./VidRec"
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -62,8 +60,9 @@ function App() {
                 element={<New inputs={productInputs} title="Add New Product" />}
               />
             </Route>
-            <Route path="CropRec" element={<CropRec />} />
-            <Route path="FertRec" element={<FertRec />} />
+            <Route path="CropRec" element={<FertRec />} />
+            <Route path="FertRec" element={<CropRec />} />
+            <Route path="VidRec" element={<VidRec />} />
           </Route>
         </Routes>
       </BrowserRouter>
