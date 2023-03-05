@@ -1,8 +1,8 @@
 import "./sidebar.scss";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
-import CloudIcon from '@mui/icons-material/Cloud';
-import ChatIcon from '@mui/icons-material/Chat';
+import CloudIcon from "@mui/icons-material/Cloud";
+import ChatIcon from "@mui/icons-material/Chat";
 import InsertChartIcon from "@mui/icons-material/InsertChart";
 import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
@@ -10,8 +10,8 @@ import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
 import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import GrassIcon from '@mui/icons-material/Grass';
-import SanitizerIcon from '@mui/icons-material/Sanitizer';
+import GrassIcon from "@mui/icons-material/Grass";
+import SanitizerIcon from "@mui/icons-material/Sanitizer";
 import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
@@ -29,10 +29,12 @@ const Sidebar = () => {
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
-          <li>
-            <DashboardIcon className="icon" />
-            <span>Landing Page</span>
-          </li>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            <li>
+              <DashboardIcon className="icon" />
+              <span>Landing Page</span>
+            </li>
+          </Link>
           <p className="title">LISTS</p>
           <Link to="/rent" style={{ textDecoration: "none" }}>
             <li>
@@ -48,12 +50,15 @@ const Sidebar = () => {
           </Link>
           <li>
             <GrassIcon className="icon" />
-            <span>Crop <br>
-            </br>Recc</span>
+            <span>
+              Crop <br></br>Recc
+            </span>
           </li>
           <li>
             <SanitizerIcon className="icon" />
-            <span>Fertilizer<br></br>Recc</span>
+            <span>
+              Fertilizer<br></br>Recc
+            </span>
           </li>
           <p className="title">USEFUL</p>
           <li>
