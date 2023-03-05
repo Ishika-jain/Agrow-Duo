@@ -9,9 +9,11 @@ import "./style/dark.scss";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import { DarkModeContext } from "./context/darkModeContext";
-import Weather from "./components/Recommendations/WeatherDisplay";
+import Weather from "./components/Recommendations/Weather";
+// import Weather from "./components/Recommendations/WeatherDisplay";
 import CropRec from "./CropRec";
 import FertRec from "./components/Recommendations/FertilizerRecommendation";
+import VidRec from "./VidRec"
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
@@ -25,6 +27,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/">
+            <Route path="login" element={<Login />} />
+
             <Route
               index
               element={
@@ -33,8 +37,7 @@ function App() {
                 </RequireAuth>
               }
             />
-            <Route path="login" element={<Login />} />
-            <Route path="rent/">
+            <Route path="rent">
               <Route index element={<List />} />
               <Route
                 path=":userId"
@@ -57,8 +60,9 @@ function App() {
                 element={<New inputs={productInputs} title="Add New Product" />}
               />
             </Route>
-            <Route path="CropRec" element={<CropRec />} />
-            <Route path="FertRec" element={<FertRec />} />
+            <Route path="CropRec" element={<FertRec />} />
+            <Route path="FertRec" element={<CropRec />} />
+            <Route path="VidRec" element={<VidRec />} />
           </Route>
         </Routes>
       </BrowserRouter>
