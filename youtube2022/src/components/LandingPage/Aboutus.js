@@ -4,12 +4,12 @@ import core from "../../images/core.jpg"
 function Aboutus() {
   return (
     <div>
-      <div>
+      <div style={{display:"flex", margin: 20, marginLeft:"2.5rem", width:"88vw"}}>
         <div className="container py-md-4">
           <h3 className="heading mb-sm-4 mb-2 text-center"> About Us</h3>
           <div className="row core-grids">
             <div className="col-lg-6 core-left">
-              <img src={core} className="img-fluid" alt="" />
+              <img src={core} className="img-fluid" alt="" style={{margin:10}}/>
             </div>
             <div className="col-lg-6 core-right">
               <h3 className="mt-4">

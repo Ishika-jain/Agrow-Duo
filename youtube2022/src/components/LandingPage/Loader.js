@@ -1,5 +1,4 @@
 import React from "react";
-
 import s2 from "../../images/s2.jpg"
 import s3 from "../../images/s3.jpg"
 import s4 from "../../images/s4.jpg"

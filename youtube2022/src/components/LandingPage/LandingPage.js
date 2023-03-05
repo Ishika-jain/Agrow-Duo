@@ -5,7 +5,7 @@ import Loader from "./Loader"
 
 function LandingPage() {
   return (
-    <div style={{ width: "88vw", marginTop: "6%", marginBottom: "10%", marginLeft: "9%" }}>
+    <div style={{ width: "85vw",padding: 10, marginTop: "4%", marginBottom: "10%", marginLeft: "6%", display:"flex", flexDirection: "column" }}>
       <Loader/>
       <Aboutus/>
       <Services/>

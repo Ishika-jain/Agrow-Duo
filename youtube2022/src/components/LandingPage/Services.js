@@ -24,12 +24,12 @@ function Services() {
   };
 
   return (
-    <>
+    <div style={{display:"flex", margin: 20, marginLeft:"2.5rem"}}>
       <section className="blog py-2">
-        <div className="container py-md-2">
+        <div className="container py-md-2" style={{width:"88vw"}}>
           <h3 className="heading mb-sm-5 mb-4 text-center"> Our Services</h3>
           <div className="row blog-grids">
-            <div className="col-lg-4 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg- pb-5">
+            <div className="col-lg-4 col-md-6 blog-left mb-lg-0 mb-sm-5 pb-lg- pb-5" style={{padding:20}}>
               <img
                 src={s3}
                 className="img-fluid"
@@ -46,7 +46,7 @@ function Services() {
                 </p>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 blog-middle mb-lg-0 mb-sm-5 pb-lg-0 pb-md-5">
+            <div className="col-lg-4 col-md-6 blog-middle mb-lg-0 mb-5 pb-lg-0 pb-md-5" style={{padding:20}}>
               <img src={s2} className="img-fluid" onClick={fertilizer} alt="" />
 
               <div className="blog-info fertilizer" onClick={fertilizer}>
@@ -57,7 +57,7 @@ function Services() {
                 </p>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 blog-right mt-lg-0 mt-5 pt-lg-0 pt-md-5">
+            <div className="col-lg-4 col-md-6 blog-right mt-lg-0 mt-5 pt-lg-0 pt-md-5" style={{padding:20}}>
               <img src={s4} className="img-fluid" alt="" onClick={govscheme} />
 
               <div className="blog-info disease" onClick={govscheme}>
@@ -71,7 +71,7 @@ function Services() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 
