@@ -3,8 +3,8 @@ import Navbar from "../../components/navbar/Navbar";
 import "./home.scss";
 import "../../../src/style/App.css"
 import LandingPage from "../../components/LandingPage/LandingPage";
-import Weather from "../../components/Weather";
-import WeatherDisplay from "../../components/WeatherDisplay"
+import Weather from "../../components/Recommendations/Weather";
+import WeatherDisplay from "../../components/Recommendations/WeatherDisplay"
 const Home = () => {
   return (
     <div className="home">

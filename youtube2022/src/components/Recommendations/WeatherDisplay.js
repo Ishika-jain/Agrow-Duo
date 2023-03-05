@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Weather from "../components/Weather";
+import Weather from "./Weather";
 // import Axios from "axios";
 
 export default function WeatherDisplay() {

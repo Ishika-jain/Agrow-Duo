@@ -9,7 +9,7 @@ import "./style/dark.scss";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import { DarkModeContext } from "./context/darkModeContext";
-import Weather from "./components/Weather";
+import Weather from "./components/Recommendations/Weather";
 import CropRec from "./CropRec";
 function App() {
   const { darkMode } = useContext(DarkModeContext);
