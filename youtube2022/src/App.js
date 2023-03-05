@@ -10,7 +10,7 @@ import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import { DarkModeContext } from "./context/darkModeContext";
 import Weather from "./components/Weather";
-
+import CropRec from "./CropRec";
 function App() {
   const { darkMode } = useContext(DarkModeContext);
 
@@ -55,6 +55,9 @@ function App() {
                 path="new"
                 element={<New inputs={productInputs} title="Add New Product" />}
               />
+
+          <Route path="CropRec" element={<CropRec />} />
+
             </Route>
           </Route>
         </Routes>
