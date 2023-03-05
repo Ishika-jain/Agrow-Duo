@@ -3,13 +3,12 @@ import React from "react";
 import s2 from "../../images/s2.jpg"
 import s3 from "../../images/s3.jpg"
 import s4 from "../../images/s4.jpg"
-import "../../style/App.css"
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 function Loader() {
   return (
-    <div name="carousel" className="carousel" >
+    <div name="carousel" style={{margin: 0}}>
       <Carousel
         className="carousel"
         interval={2000}
@@ -17,7 +16,7 @@ function Loader() {
         infiniteLoop={true}
       >
         <div>
-          <img src={s2} alt="/" />
+          <img src={s2} alt="" />
         </div>
         <div>
           <img src={s3} alt="/" />
