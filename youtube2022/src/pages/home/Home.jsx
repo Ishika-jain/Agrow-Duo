@@ -4,6 +4,7 @@ import "./home.scss";
 import "../../../src/style/App.css"
 import LandingPage from "../../components/LandingPage/LandingPage";
 import Weather from "../../components/Weather";
+import WeatherDisplay from "../../components/WeatherDisplay"
 const Home = () => {
   return (
     <div className="home">
