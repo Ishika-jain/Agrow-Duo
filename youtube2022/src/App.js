@@ -9,8 +9,8 @@ import "./style/dark.scss";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import { DarkModeContext } from "./context/darkModeContext";
-import Weather from "./components/Recommendations/WeatherDisplay";
-import CropRec from "./CropRec";
+import Weather from "./components/Recommendations/Weather";
+
 function App() {
   const { darkMode } = useContext(DarkModeContext);
 
@@ -24,6 +24,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/">
+            <Route path="login" element={<Login />} />
+
             <Route
               index
               element={
@@ -32,8 +34,7 @@ function App() {
                 </RequireAuth>
               }
             />
-            <Route path="login" element={<Login />} />
-            <Route path="rent/">
+            <Route path="rent">
               <Route index element={<List />} />
               <Route
                 path=":userId"
@@ -55,9 +56,6 @@ function App() {
                 path="new"
                 element={<New inputs={productInputs} title="Add New Product" />}
               />
-
-          <Route path="CropRec" element={<CropRec />} />
-
             </Route>
           </Route>
         </Routes>
