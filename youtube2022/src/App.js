@@ -11,9 +11,10 @@ import { AuthContext } from "./context/AuthContext";
 import { DarkModeContext } from "./context/darkModeContext";
 import Weather from "./components/Recommendations/WeatherDisplay";
 import CropRec from "./CropRec";
+import FertRec from "./components/Recommendations/FertilizerRecommendation";
+
 function App() {
   const { darkMode } = useContext(DarkModeContext);
-
   const { currentUser } = useContext(AuthContext);
 
   const RequireAuth = ({ children }) => {
@@ -55,10 +56,9 @@ function App() {
                 path="new"
                 element={<New inputs={productInputs} title="Add New Product" />}
               />
-
-          <Route path="CropRec" element={<CropRec />} />
-
             </Route>
+            <Route path="CropRec" element={<CropRec />} />
+            <Route path="FertRec" element={<FertRec />} />
           </Route>
         </Routes>
       </BrowserRouter>

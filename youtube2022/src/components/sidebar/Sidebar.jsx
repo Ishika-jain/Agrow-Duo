@@ -48,18 +48,23 @@ const Sidebar = () => {
               <span>Weather</span>
             </li>
           </Link>
-          <li>
-            <GrassIcon className="icon" />
-            <span>
-              Crop <br></br>Recc
-            </span>
-          </li>
-          <li>
-            <SanitizerIcon className="icon" />
-            <span>
-              Fertilizer<br></br>Recc
-            </span>
-          </li>
+          <Link to="/CropRec" style={{ textDecoration: "none" }}>
+            <li>
+              <GrassIcon className="icon" />
+              <span>
+                Crop <br></br>
+                Rec.
+              </span>
+            </li>
+          </Link>
+          <Link to="/FertRec" style={{textDecoration:"none"}}>
+            <li>
+              <SanitizerIcon className="icon" />
+              <span>
+                Fertilizer<br></br>Rec.
+              </span>
+            </li>
+          </Link>
           <p className="title">USEFUL</p>
           <li>
             <InsertChartIcon className="icon" />

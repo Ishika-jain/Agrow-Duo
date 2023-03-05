@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+import Navbar from "../navbar/Navbar";
+import Sidebar from "../sidebar/Sidebar";
 import Weather from "./Weather";
 // import Axios from "axios";
+
 
 export default function WeatherDisplay() {
   const [lat, setLat] = useState([]);
@@ -24,15 +27,21 @@ export default function WeatherDisplay() {
   }, [lat, long]);
 
   return (
-    <div className="App" style={{}}>
-      {typeof data != "undefined" ? (
-        <>
-          {console.log(data)}
-          <Weather weatherData={data} />
-        </>
-      ) : (
-        <div>{console.log("bhai data " + data)}</div>
-      )}
+    <div className="App">
+      <div className="home">
+        <Sidebar />
+        <div className="homeContainer">
+          <Navbar />
+          {typeof data != "undefined" ? (
+            <>
+              {console.log(data)}
+              <Weather weatherData={data} />
+            </>
+          ) : (
+            <div>{console.log("Lost data" + data)}</div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
