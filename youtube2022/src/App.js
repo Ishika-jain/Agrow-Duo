@@ -9,8 +9,8 @@ import "./style/dark.scss";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import { DarkModeContext } from "./context/darkModeContext";
-import Weather from "./components/Recommendations/Weather";
-// import Weather from "./components/Recommendations/WeatherDisplay";
+// import Weather from "./components/Recommendations/Weather";
+import Weather from "./components/Recommendations/WeatherDisplay";
 import CropRec from "./CropRec";
 import FertRec from "./components/Recommendations/FertilizerRecommendation";
 import VidRec from "./VidRec"
