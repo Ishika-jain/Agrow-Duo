@@ -34,7 +34,7 @@ function App() {
                 </RequireAuth>
               }
             />
-            <Route path="users">
+            <Route path="rent">
               <Route index element={<List />} />
               <Route
                 path=":userId"
