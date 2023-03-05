@@ -9,11 +9,12 @@ import "./style/dark.scss";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import { DarkModeContext } from "./context/darkModeContext";
+import Weather from "./components/Weather";
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
 
-  const {currentUser} =  useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
 
   const RequireAuth = ({ children }) => {
     return currentUser ? children : <Navigate to="/login" />;
@@ -48,8 +49,8 @@ function App() {
                 element={<New inputs={userInputs} title="Add New User" />}
               />
             </Route>
-            <Route path="products">
-              <Route index element={<List />} />
+            <Route path="weather">
+              <Route index element={<Weather />} />
               <Route path=":productId" element={<Single />} />
               <Route
                 path="new"
