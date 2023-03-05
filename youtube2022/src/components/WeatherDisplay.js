@@ -5,7 +5,7 @@ import Weather from "../components/Weather";
 export default function WeatherDisplay() {
   const [lat, setLat] = useState([]);
   const [long, setLong] = useState([]);
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
 
   const fetchData = async () => {
     navigator.geolocation.getCurrentPosition(function (position) {
@@ -21,11 +21,12 @@ export default function WeatherDisplay() {
   };
   useEffect(() => {
     fetchData();
-  }, [lat, long]);
+  }, [lat, long, data]);
 
   return (
     <div className="App" style={{}}>
-      {typeof data != "undefined" ? (
+    {console.log(data)}
+      {data.length != 0 ? (
         <>
           {console.log(data)}
           <Weather weatherData={data} />
