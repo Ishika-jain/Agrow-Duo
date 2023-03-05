@@ -1,6 +1,10 @@
 import React, { useState } from "react";
-import "../App.css";
+// import "../App.css";
 import Axios from "axios";
+import Sidebar from "../sidebar/Sidebar";
+import Navbar from "../navbar/Navbar";
+
+
 
 function FertilizerRecommendation() {
   const [phop, setP] = useState();
@@ -57,47 +61,51 @@ function FertilizerRecommendation() {
 
   return (
     <>
-      <form className="croprecform" onSubmit={SendRequest}>
-        <label>Enter N, P, K values in soil</label>
-        <input
-          type="text"
-          name=""
-          id="n"
-          onChange={(e) => {
-            setN(e.target.value);
-          }}
-        />
-        <input
-          type="text"
-          name=""
-          id="p"
-          onChange={(e) => {
-            setP(e.target.value);
-          }}
-        />
-        <input
-          type="text"
-          name=""
-          id="k"
-          onChange={(e) => {
-            setK(e.target.value);
-          }}
-        />
-        <button type="submit">Submit</button>
-      </form>
-      <div>
-        <h1>Crops that can be grown are</h1>
-        <span>Crop 1: {Crop1}</span>
-        <br></br>
-        <span>Crop 2: {Crop2}</span>
-        <br></br>
-        <span>Crop 3: {Crop3}</span>
-        <br></br>
+      <div className="home">
+        <Sidebar />
+        <div className="homeContainer">
+          <Navbar />
+          <form className="croprecform" onSubmit={SendRequest}>
+            <label>Enter N, P, K values in soil</label>
+            <input
+              type="text"
+              name=""
+              id="n"
+              onChange={(e) => {
+                setN(e.target.value);
+              }}
+            />
+            <input
+              type="text"
+              name=""
+              id="p"
+              onChange={(e) => {
+                setP(e.target.value);
+              }}
+            />
+            <input
+              type="text"
+              name=""
+              id="k"
+              onChange={(e) => {
+                setK(e.target.value);
+              }}
+            />
+            <button type="submit">Submit</button>
+          </form>
+          <div>
+            <h1>Crops that can be grown are</h1>
+            <span>Crop 1: {Crop1}</span>
+            <br></br>
+            <span>Crop 2: {Crop2}</span>
+            <br></br>
+            <span>Crop 3: {Crop3}</span>
+            <br></br>
+          </div>
+        </div>
       </div>
     </>
   );
 }
 
-export default FertilizerRecommendatio
-    ;
-
+export default FertilizerRecommendation;

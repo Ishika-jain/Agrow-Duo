@@ -9,11 +9,16 @@ import "./style/dark.scss";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import { DarkModeContext } from "./context/darkModeContext";
+<<<<<<< HEAD
 import Weather from "./components/Recommendations/Weather";
+=======
+import Weather from "./components/Recommendations/WeatherDisplay";
+import CropRec from "./CropRec";
+import FertRec from "./components/Recommendations/FertilizerRecommendation";
+>>>>>>> bbf8493a56791422837cc517fff6b7107d195581
 
 function App() {
   const { darkMode } = useContext(DarkModeContext);
-
   const { currentUser } = useContext(AuthContext);
 
   const RequireAuth = ({ children }) => {
@@ -57,6 +62,8 @@ function App() {
                 element={<New inputs={productInputs} title="Add New Product" />}
               />
             </Route>
+            <Route path="CropRec" element={<CropRec />} />
+            <Route path="FertRec" element={<FertRec />} />
           </Route>
         </Routes>
       </BrowserRouter>
